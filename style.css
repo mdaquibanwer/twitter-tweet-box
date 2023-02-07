@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1da1f2;
+}
+.container{
+    background: #fff;
+    padding: 25px 25px 15px;
+    border-radius: 15px;
+    max-width: 475px;
+    width: 100%;
+}
+.input-box{
+    padding-top: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.input-box .tweet-area{
+    position: relative;
+    min-height: 130px;
+    max-height: 180px;
+    overflow-y: scroll;
+}
+.input-box .tweet-area::-webkit-scrollbar{
+    width: 0px;
+}
+.tweet-area .placeholder{
+    position: absolute;
+    margin-top: -5px;
+    font-size: 22px;
+    color: #98a5b1;
+    pointer-events: none;
+}
+.tweet-area .input{
+    font-size: 18px;
+    outline: none;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.tweet-area .editable{
+    position: relative;
+    z-index: 5;
+}
+.tweet-area .readonly{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: transparent;
+    background-color: transparent;
+}
+.readonly .highlightText{
+    background-color: #fd9bb0;
+}
+.container .privacy{
+    color: #1da1f2;
+    margin: 15px 0;
+    padding: 8px 10px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.container .privacy:hover, .icons li:hover{
+    background: #e7f5fe;
+}
+.privacy i{
+    font-size: 18px;
+}
+.privacy span{
+    margin-left: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.bottom-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+.bottom-area .icons{
+    display: inline-flex;
+}
+.icons li{
+    list-style: none;
+    height: 38px;
+    width: 38px;
+    color: #1da1f2;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s ease;
+}
+.bottom-area .content{
+    display: flex;
+    align-items: center;
+}
+.content .counter{
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #aab8c2;
+    color: #333;
+    font-weight: 600;
+    display: none;
+}
+.content button{
+    padding: 9px 18px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    background: #1da1f2;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.content button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
